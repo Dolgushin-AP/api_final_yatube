@@ -46,7 +46,7 @@ class FollowSerializer(ModelSerializer):
         slug_field='username',
         queryset=User.objects.all()
     )
-    
+
     validators = (
         UniqueTogetherValidator(
             queryset=Follow.objects.all(),
